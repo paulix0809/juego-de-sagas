@@ -2,8 +2,8 @@
    Una isla de rascacielos con las ventanas encendidas, Central Park, un puente colgante, el río alrededor
    y la Torre de los Vengadores en medio. Cada sector levanta su edificio, y las cinco eras traen el
    Helitransporte, la invasión por el portal, la nave anillo y los portales de Endgame. */
-import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut } from '../../kit3d.js?v=1116a';
-import { tower, quinjet, helicarrier } from './piezas.js?v=1116a';
+import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut } from '../../kit3d.js?v=1116b';
+import { tower, quinjet, helicarrier } from './piezas.js?v=1116b';
 
 export const SITES = { robotics: [1.7, 2.3], lab: [3.3, 2.7], saas: [-0.4, 2.7], health: [2.4, -1.4], security: [0.8, -1.7], materials: [1.75, 0.95] };
 const AGE_AT = [0, 700, 1500, 2600, 3800];

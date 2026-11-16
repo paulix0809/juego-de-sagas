@@ -1,13 +1,13 @@
 /* Juego de sagas · interfaz y turnos. Todos los textos, colores y piezas vienen de la edición. */
-import { Game, TILES, SECTORS, STAGES, PERKS, TARGET, KICKOFF, MAX_ROUNDS, SET_BONUS, money, applyEdition } from './rules.js?v=1116a';
-import { createBoard } from './board3d.js?v=1116a';
-import { EDITIONS, DEFAULT } from './ediciones/lista.js?v=1116a';
+import { Game, TILES, SECTORS, STAGES, PERKS, TARGET, KICKOFF, MAX_ROUNDS, SET_BONUS, money, applyEdition } from './rules.js?v=1116b';
+import { createBoard } from './board3d.js?v=1116b';
+import { EDITIONS, DEFAULT } from './ediciones/lista.js?v=1116b';
 
 /* ---------- which edition: ?ed=… in the address, otherwise the last one played here ---------- */
 const store = { get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } } };
 const asked = new URLSearchParams(location.search).get('ed');
 let edId = [asked, store.get('sagas.edicion'), DEFAULT].find(id => id && EDITIONS.some(e => e.id === id && e.ready));
-const ED = (await import(`./ediciones/${edId}/edicion.js?v=1116a`)).default;
+const ED = (await import(`./ediciones/${edId}/edicion.js?v=1116b`)).default;
 store.set('sagas.edicion', edId);
 applyEdition(ED.rules);
 STAGES.splice(0, 3, ...ED.stages);
@@ -304,6 +304,8 @@ const io = {
 
 /* ---------- start / end ---------- */
 function setupScreen() {
+  $('#eds').innerHTML = EDITIONS.filter(e => e.ready).map(e => `<a href="?ed=${e.id}" class="${e.id === edId ? 'cur' : ''}" style="--e:${e.color}" data-ed="${e.id}"><i></i>${e.name}</a>`).join('');
+  $('#eds').addEventListener('click', ev => { const a = ev.target.closest('[data-ed]'); if (a) store.set('sagas.edicion', a.dataset.ed); });
   $('#kicker').textContent = T.kicker;
   $('#h1').innerHTML = T.h1; $('#h1').className = T.h1Class || '';
   $('#lead').textContent = T.lead;
@@ -456,6 +458,7 @@ $('#b-speed').addEventListener('click', ev => { speed = speed === 1 ? 2 : speed 
 $('#b-sound').addEventListener('click', ev => { muted = !muted; ev.currentTarget.classList.toggle('off', muted); ev.currentTarget.setAttribute('aria-pressed', String(!muted)); });
 $('#b-view').addEventListener('click', ev => { overview = !overview; board.overview(overview); ev.currentTarget.classList.toggle('on', overview); });
 $('#b-help').addEventListener('click', () => { if (!modalResolve) ask(`<div class="card ev help"><div class="band"><span>${T.helpBand}</span><b></b></div><h2>${T.helpTitle}</h2><ol>${T.help(score(TARGET), money(KICKOFF), MAX_ROUNDS).map(l => `<li>${l}</li>`).join('')}</ol><div class="btns"><button class="cta" data-v="1">${T.gotIt}</button></div></div>`); });
+$('#b-ed').addEventListener('click', () => { if (!modalResolve) openPicker(); });
 $('#go').addEventListener('click', startGame);
 
 /* ---------- tile tooltip ---------- */

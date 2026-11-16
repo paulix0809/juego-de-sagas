@@ -1,8 +1,8 @@
 /* Demon Slayer · edición fan no oficial del juego de sagas.
    Mismas reglas que el juego base. Cada sector es el territorio de una Luna Superior: conquistar los
    tres lugares de un sector es derrotarla. Sin logos, imágenes, música ni tipografías oficiales. */
-import { makeToken, makeBuilding, makeProp, icon } from './piezas.js?v=1116a';
-import { buildWorld } from './mundo.js?v=1116a';
+import { makeToken, makeBuilding, makeProp, icon } from './piezas.js?v=1116b';
+import { buildWorld } from './mundo.js?v=1116b';
 
 const thousands = n => String(Math.round(Math.abs(n))).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const money = k => {
@@ -177,7 +177,7 @@ export default {
     infoSpecial: k => ({ kickoff: `Cada vez que pasas por la Finca Mariposa cobras ${k}. Si caes justo aquí, cobras un extra.`, signal: 'Tu cuervo trae una orden: pagas, demonios, festivales. Unas ayudan, otras no, y algunas te mueven.', brain: 'Entrenas una técnica de respiración. Casi todas te acompañan el resto de la partida.', spam: 'Te quedas atrapado en la telaraña y pierdes el próximo turno, salvo que huelas la trampa.', board: 'Has roto otra katana y el herrero te cobra el 12 % de tus yenes.' }),
     specialBand: 'Casilla especial',
     noWebgl: '<h1>Este juego necesita <em>WebGL</em></h1><p class="lead">Tu navegador no ha podido arrancar el tablero 3D. Prueba con un Chrome, Safari o Firefox reciente con la aceleración por hardware activada.</p>',
-    pickerBand: 'Ediciones secretas', pickerTitle: 'Elige tu saga', pickerText: 'El mismo juego en otro universo. El tablero se vuelve a montar con la edición que elijas.',
+    pickerBand: 'Ediciones', pickerTitle: 'Elige tu saga', pickerText: 'El mismo juego en otro universo. El tablero se vuelve a montar con la edición que elijas.',
     pickerNow: 'La que estás jugando', pickerSoon: 'Próximamente'
   },
 

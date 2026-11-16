@@ -1,6 +1,6 @@
 /* Demon Slayer (edición fan) · figuras, casas, Pilares y objetos de las casillas.
    Todo modelado a mano con formas sencillas: ningún modelo, logo ni imagen oficial. */
-import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116a';
+import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116b';
 
 const UNI = '#1B1D26', WHITE = '#ECE8DE', SKIN = '#EBC9A8';
 const mat = (c, o = {}) => std(c, Object.assign({ roughness: 0.8 }, o));

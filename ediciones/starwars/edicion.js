@@ -1,8 +1,8 @@
 /* Star Wars · edición fan no oficial del juego de sagas.
    Mismas reglas que el juego base; aquí van los nombres, las cartas, los personajes, los textos,
    los colores y las piezas 3D. Sin logos, imágenes, música ni tipografías oficiales. */
-import { makeToken, makeBuilding, makeProp, icon } from './piezas.js?v=1116a';
-import { buildWorld } from './mundo.js?v=1116a';
+import { makeToken, makeBuilding, makeProp, icon } from './piezas.js?v=1116b';
+import { buildWorld } from './mundo.js?v=1116b';
 
 const thousands = n => String(Math.round(Math.abs(n))).replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const money = k => {
@@ -179,7 +179,7 @@ export default {
     infoSpecial: k => ({ kickoff: `Cada vez que pasas por el Hiperespacio cobras ${k}. Si caes justo aquí, cobras un extra.`, signal: 'Saca una transmisión: botines, emboscadas, saltos a la velocidad de la luz. Unas ayudan, otras no, y algunas te mueven.', brain: 'Abre un holocrón. Casi todas sus lecciones te acompañan el resto de la partida.', spam: 'Te congelan en carbonita y pierdes el próximo turno, salvo que tengas un escudo deflector.', board: 'El Imperio cobra sus impuestos: pagas el 12 % de tus créditos.' }),
     specialBand: 'Casilla especial',
     noWebgl: '<h1>Este juego necesita <em>WebGL</em></h1><p class="lead">Tu navegador no ha podido arrancar el tablero 3D. Prueba con un Chrome, Safari o Firefox reciente con la aceleración por hardware activada.</p>',
-    pickerBand: 'Ediciones secretas', pickerTitle: 'Elige tu saga', pickerText: 'El mismo juego en otro universo. El tablero se vuelve a montar con la edición que elijas.',
+    pickerBand: 'Ediciones', pickerTitle: 'Elige tu saga', pickerText: 'El mismo juego en otro universo. El tablero se vuelve a montar con la edición que elijas.',
     pickerNow: 'La que estás jugando', pickerSoon: 'Próximamente'
   },
 

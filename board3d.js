@@ -7,7 +7,7 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { easeIO, easeOut, backOut, rng, std, glow, metal, mesh, shadow, tex, canvas, rr, glowSprite, RoundedBoxGeometry } from './kit3d.js?v=1116a';
+import { easeIO, easeOut, backOut, rng, std, glow, metal, mesh, shadow, tex, canvas, rr, glowSprite, RoundedBoxGeometry } from './kit3d.js?v=1116b';
 
 const N = 30, D = (Math.PI * 2) / N;
 const R_IN = 5.62, R_OUT = 9.8, Y = 0.25, LANE = 9.12, LABEL = 7.68, PLOT = 6.28;

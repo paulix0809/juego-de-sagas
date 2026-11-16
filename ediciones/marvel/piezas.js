@@ -1,6 +1,6 @@
 /* Marvel (edición fan) · figuras, edificios, vehículos y objetos de las casillas.
    Todo modelado a mano con formas sencillas: ningún modelo, logo ni imagen oficial. */
-import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116a';
+import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116b';
 
 const DARK = '#1A1D24';
 const gloss = (c, o = {}) => std(c, Object.assign({ roughness: 0.25, metalness: 0.65, envMapIntensity: 1.5 }, o));

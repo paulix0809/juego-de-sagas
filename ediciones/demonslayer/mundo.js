@@ -3,8 +3,8 @@
    un río y la luna llena. La partida es una noche: empieza a oscuras y termina al amanecer.
    Las eras traen el Tren Infinito, el Distrito del Entretenimiento, la Aldea de los Herreros
    y el Castillo Infinito flotando bajo la luna roja. */
-import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut, mergeGeometries } from '../../kit3d.js?v=1116a';
-import { house, roof, butterfly, crow } from './piezas.js?v=1116a';
+import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut, mergeGeometries } from '../../kit3d.js?v=1116b';
+import { house, roof, butterfly, crow } from './piezas.js?v=1116b';
 
 export const SITES = { robotics: [1.7, 2.3], lab: [3.3, 2.7], saas: [-0.4, 2.7], health: [2.4, -1.4], security: [0.8, -1.7], materials: [1.75, 0.95] };
 const AGE_AT = [0, 700, 1500, 2600, 3800];

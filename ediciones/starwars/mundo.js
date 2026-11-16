@@ -3,8 +3,8 @@
    un reptador de arena y el esqueleto de un dragón. Cada sector tiene un asentamiento que crece,
    y el cielo cambia con las cinco eras: carreras de vainas, el Destructor Estelar, la batalla
    de cazas y, al final, la Estrella de la Muerte. */
-import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut, mergeGeometries } from '../../kit3d.js?v=1116a';
-import { falcon, xwing, tie, destroyer, shuttle, vaporator, domeHut } from './piezas.js?v=1116a';
+import { THREE, std, glow, metal, mesh, box, cyl, ball, cone, torus, shadow, glowSprite, canvas, tex, smooth, rng, backOut, mergeGeometries } from '../../kit3d.js?v=1116b';
+import { falcon, xwing, tie, destroyer, shuttle, vaporator, domeHut } from './piezas.js?v=1116b';
 
 export const SITES = { robotics: [1.7, 2.3], lab: [3.3, 2.7], saas: [-0.4, 2.7], health: [2.4, -1.4], security: [0.8, -1.7], materials: [1.75, 0.95] };
 const AGE_AT = [0, 700, 1500, 2600, 3800];

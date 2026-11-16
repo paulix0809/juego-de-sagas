@@ -154,6 +154,12 @@ kbd{font:800 11px var(--sans);padding:2px 6px;border-radius:5px;background:rgba(
 .btns{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 20px 16px}
 .help ol{margin:4px 20px 14px 38px;padding:0;font-size:14.5px;line-height:1.5;color:var(--text-2)} .help li{margin-bottom:6px} .help b{color:var(--text)}
 
+/* edition chips on the start screen */
+.eds{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 22px}
+.eds a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(var(--panel-rgb),.6);font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-2);text-decoration:none;transition:border-color .2s,color .2s}
+.eds a i{width:9px;height:9px;border-radius:50%;background:var(--e)}
+.eds a:hover{border-color:var(--text-3);color:var(--text)}
+.eds a.cur{border-color:var(--e);color:var(--text);box-shadow:inset 0 0 0 1px var(--e)}
 /* edition picker (the secret one) */
 .picker .ed{display:flex;align-items:center;gap:12px;width:calc(100% - 40px);margin:0 20px 8px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.03);text-align:left}
 .picker .ed:hover:not(:disabled){border-color:var(--accent)} .picker .ed.cur{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
@@ -231,6 +237,7 @@ body.shot .screen,body.shot .hud,body.shot .vig{display:none}
       <button class="tool glass" id="b-speed" title="Velocidad">1×</button>
       <button class="tool glass" id="b-view" title="Vista desde arriba" aria-label="Vista desde arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg></button>
       <button class="tool glass" id="b-sound" title="Sonido" aria-label="Sonido" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4zM17 9a4 4 0 0 1 0 6M19.5 6.5a8 8 0 0 1 0 11"/></svg></button>
+      <button class="tool glass" id="b-ed" title="Cambiar de saga" aria-label="Cambiar de saga"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></button>
       <button class="tool glass" id="b-help" title="Cómo se juega">?</button>
     </div>
   </header>
@@ -247,6 +254,7 @@ body.shot .screen,body.shot .hud,body.shot .vig{display:none}
 
 <div class="screen" id="start">
   <div class="panel">
+    <nav class="eds" id="eds" aria-label="Elige saga"></nav>
     <p class="kicker secret" id="kicker"></p>
     <h1 id="h1"></h1>
     <p class="lead" id="lead"></p>
@@ -261,6 +269,6 @@ body.shot .screen,body.shot .hud,body.shot .vig{display:none}
 <div class="screen" id="end"><div class="panel" id="end-inner"></div></div>
 
 <!-- Al publicar, subir este ?v= y el de los import de los .js: el navegador guarda los módulos un rato y mezclar viejos y nuevos rompe el tablero. -->
-<script type="module" src="main.js?v=1116a"></script>
+<script type="module" src="main.js?v=1116b"></script>
 </body>
 </html>

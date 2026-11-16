@@ -1,6 +1,6 @@
 /* Star Wars (edición fan) · figuras, edificios, naves y objetos de las casillas.
    Todo está modelado a mano con formas sencillas: no se usa ningún modelo ni imagen oficial. */
-import { THREE, std, glow, metal, basic, mesh, box, cyl, ball, cone, torus, group, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116a';
+import { THREE, std, glow, metal, basic, mesh, box, cyl, ball, cone, torus, group, lathe, slab, canvas, tex, rr, glowSprite, tokenStand } from '../../kit3d.js?v=1116b';
 
 const GREY = '#C9CDD3', GREY2 = '#8D939C', DARK = '#1A1D24', SAND = '#D9C29A';
 const gloss = c => std(c, { roughness: 0.22, metalness: 0.55, envMapIntensity: 1.5 });
